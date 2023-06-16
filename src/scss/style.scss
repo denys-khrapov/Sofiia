@@ -1,0 +1,93 @@
+@import "fonts";
+@import "base/mixins";
+
+$black-50: rgb(243, 243, 243);
+$black-100: rgb(221, 221, 221);
+$black-200: rgb(198, 198, 198);
+$black-300: rgb(176, 176, 176);
+$black-400: rgb(155, 155, 155);
+$black-500: rgb(134, 134, 134);
+$black-600: rgb(113, 113, 113);
+$black-700: rgb(94, 94, 94);
+$black-800: rgb(75, 75, 75);
+$black-900: rgb(57, 57, 57);
+$teal-50: rgb(234, 245, 246);
+$teal-100: rgb(193, 227, 228);
+$teal-200: rgb(153, 208, 210);
+$teal-300: rgb(113, 188, 192);
+$teal-400: rgb(75, 168, 173);
+$teal-500: rgb(32, 148, 153);
+$teal-600: rgb(0, 127, 132);
+$teal-700: rgb(0, 106, 111);
+$teal-800: rgb(0, 85, 90);
+$teal-900: rgb(0, 65, 68);
+$white-50: rgb(243, 243, 243);
+$white-100: rgb(221, 221, 221);
+$white-200: rgb(198, 198, 198);
+$white-300: rgb(176, 176, 176);
+$white-400: rgb(155, 155, 155);
+$white-500: rgb(134, 134, 134);
+$white-600: rgb(113, 113, 113);
+$white-700: rgb(94, 94, 94);
+$white-800: rgb(75, 75, 75);
+$white-900: rgb(57, 57, 57);
+$black-source: #000000;
+$white-source: #ffffff;
+
+$fontFamily: "Ubuntu", sans-serif;
+$fontSize: 23px;
+
+$minWidth: 320px;
+$maxWidth: 1920px;
+$maxWidthContainer: 1148px;
+$md1: 1199px;
+$md2: 1024px;
+$md3: 767px;
+$md4: 575px;
+
+@import "base/null";
+
+body {
+	&.lock {
+		overflow: hidden;
+	}
+	font-family: $fontFamily;
+	font-size: $fontSize;
+	color: $black-source;
+	font-weight: 300;
+	line-height: 32px;
+	font-style: normal;
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	width: 100%;
+	max-width: $maxWidthContainer;
+	margin: 0 auto;
+	padding: 0 16px;
+	@media (max-width: $md1) {
+		max-width: 100%;
+		padding: 0 32px;
+	}
+	@media (max-width: $md2) {
+	}
+	@media (max-width: $md3) {
+	}
+	@media (max-width: $md4) {
+		padding: 0 16px;
+	}
+}
+
+.content {
+	flex: 1 1 auto;
+}
+
+@import "blocks/header";
+@import "blocks/footer";

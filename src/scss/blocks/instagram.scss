@@ -1,0 +1,139 @@
+/*! -- Instagram styles----------------------------- */
+.instagram {
+	padding: 128px 0px;
+	&__container {
+		display: flex;
+		flex-direction: column;
+		row-gap: 96px;
+	}
+	&__header {
+		display: flex;
+		flex-direction: row;
+		column-gap: 24px;
+	}
+	&__left-column {
+		width: 100%;
+		max-width: 261px;
+	}
+	&__right-column {
+		width: calc(100% - 261px);
+	}
+	&__title {
+		font-size: 50px;
+		font-weight: 400;
+		line-height: 55px;
+		letter-spacing: -0.05em;
+		margin: 0px 0px 48px 0px;
+		span {
+			font-weight: 300;
+			font-style: italic;
+			color: $teal-source;
+		}
+	}
+
+	&__link-box {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		column-gap: 2px;
+	}
+	&__gallery {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		column-gap: 24px;
+		row-gap: 24px;
+	}
+}
+
+@media (max-width: $md1) {
+	/*! -- Instagram styles----------------------------- */
+	.instagram {
+		padding: 64px 0px;
+		&__right-column,
+		&__left-column {
+			width: 50%;
+			max-width: 100%;
+		}
+		&__title {
+			font-size: 32px;
+			line-height: 35px;
+			margin: 0px 0px 24px 0px;
+		}
+		&__container {
+			row-gap: 64px;
+		}
+		&__svg-holder {
+			max-width: 90.5px;
+			height: 26px;
+			svg {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		&__gallery {
+			column-gap: 0px;
+			row-gap: 16px;
+			margin: 0 -8px;
+		}
+		&__image-holder {
+			width: 50%;
+			padding: 0px 8px;
+			img {
+				width: 100%;
+				height: 248px;
+				object-fit: cover;
+			}
+		}
+		&__link-box {
+			p {
+				font-size: 16px;
+				line-height: 22px;
+			}
+		}
+	}
+}
+
+@media (max-width: $md3) {
+	/*! -- Instagram styles----------------------------- */
+	.instagram {
+		&__left-column {
+			width: 44%;
+		}
+		&__right-column {
+			width: 56%;
+		}
+		&__link-box {
+			justify-content: end;
+		}
+	}
+}
+
+@media (max-width: $md4) {
+	/*! -- Instagram styles----------------------------- */
+	.instagram {
+		&__header {
+			flex-direction: column;
+			row-gap: 24px;
+			column-gap: 0px;
+		}
+		&__left-column,
+		&__right-column {
+			width: 100%;
+			max-width: 100%;
+		}
+		&__link-box {
+			justify-content: start;
+		}
+		&__image-holder {
+			img {
+				height: 136px;
+			}
+		}
+		&__svg-holder {
+			max-width: 130px;
+			height: 34.5px;
+		}
+	}
+}

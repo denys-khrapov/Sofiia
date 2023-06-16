@@ -1,0 +1,53 @@
+/*! -- Links styles----------------------------- */
+.link {
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: 400;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	column-gap: 8px;
+	padding: 4px 8px;
+	color: $teal-source;
+	transition: all 0.3s ease 0s;
+	svg {
+		path {
+			transition: all 0.3s ease 0s;
+		}
+	}
+	&:active {
+		color: $teal-800;
+		svg {
+			path {
+				fill: $teal-800;
+			}
+		}
+	}
+	&:focus {
+		box-shadow: 0 0 0 3px #008085;
+		border-radius: 4px;
+		outline: none;
+	}
+	&.blocked {
+		color: $black-900;
+		pointer-events: none;
+		svg {
+			path {
+				fill: $black-900;
+			}
+		}
+	}
+}
+
+@media (any-hover: hover) {
+	.link {
+		&:hover {
+			color: $teal-600;
+			svg {
+				path {
+					fill: $teal-600;
+				}
+			}
+		}
+	}
+}

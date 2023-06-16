@@ -1,5 +1,6 @@
 jQuery(document).ready(function ($) {
 	testWebPFunction();
+	initAccordion();
 });
 
 function testWebPFunction() {
@@ -18,3 +19,39 @@ function testWebPFunction() {
 	})
 }
 
+function initAccordion() {
+let acc = document.getElementsByClassName("accordion__btn");
+let i;
+
+function openFirstAccordion() {
+  if (window.innerWidth >= 1200 && acc.length > 0) {
+    acc[0].classList.add("active");
+    let panel = acc[0].nextElementSibling;
+    panel.style.maxHeight = panel.scrollHeight + "px";
+  }
+}
+
+openFirstAccordion();
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    let isActive = this.classList.contains("active");
+
+    for (let j = 0; j < acc.length; j++) {
+      acc[j].classList.remove("active");
+      let panel = acc[j].nextElementSibling;
+      panel.style.maxHeight = null;
+    }
+
+    if (!isActive) {
+      this.classList.add("active");
+      let panel = this.nextElementSibling;
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+
+window.addEventListener("resize", openFirstAccordion);
+
+
+}

@@ -1,0 +1,109 @@
+/*! -- Faq styles----------------------------- */
+.faq {
+	padding: 128px 0px;
+	&__header {
+		display: flex;
+		column-gap: 119px;
+		margin: 0px 0px 96px 0px;
+	}
+	&__left-column {
+		width: 100%;
+		max-width: 451px;
+	}
+	&__right-column {
+		width: calc(100% - 451px);
+	}
+	&__suptitle {
+		font-size: 24px;
+		font-weight: 700;
+		text-transform: uppercase;
+		line-height: 36px;
+		color: $teal-source;
+		margin: 0px 0px 24px 0px;
+	}
+	&__title {
+		font-size: 50px;
+		font-weight: 400;
+		line-height: 55px;
+		letter-spacing: -0.05em;
+		margin: 0px 0px 24px 0px;
+	}
+}
+
+@media (max-width: $md1) {
+	/*! -- Faq styles----------------------------- */
+	.faq {
+		padding: 64px 0px;
+		&__header {
+			margin: 0px 0px 64px 0px;
+			column-gap: 24px;
+		}
+		&__suptitle {
+			font-size: 16px;
+			line-height: 24px;
+		}
+		&__title {
+			font-size: 32px;
+			line-height: 35px;
+		}
+		&__text {
+			font-size: 16px;
+			line-height: 22px;
+		}
+		&__left-column,
+		&__right-column {
+			width: 50%;
+			max-width: 100%;
+		}
+		&__right-column {
+			position: relative;
+			&::before {
+				content: "";
+				position: absolute;
+				top: -75px;
+				left: 0px;
+				background-image: url("../img/faq-decor-right-1199.png");
+				background-position: center center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				width: 402.25px;
+				height: 402.25px;
+				z-index: 1;
+			}
+		}
+	}
+}
+
+@media (max-width: $md4) {
+	/*! -- Faq styles----------------------------- */
+	.faq {
+		&__header {
+			flex-direction: column;
+			column-gap: 0px;
+			row-gap: 24px;
+		}
+		&__left-column,
+		&__right-column {
+			width: 100%;
+		}
+		&__right-column::before {
+			display: none;
+		}
+		&__left-column {
+			position: relative;
+		}
+		&__left-column::before {
+			content: "";
+			position: absolute;
+			top: -92px;
+			left: 280px;
+			background-image: url("../img/faq-decor-right-1199.png");
+			background-position: center center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: 402.25px;
+			height: 402.25px;
+			z-index: 1;
+		}
+	}
+}

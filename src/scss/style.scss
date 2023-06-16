@@ -33,6 +33,7 @@ $white-800: rgb(75, 75, 75);
 $white-900: rgb(57, 57, 57);
 $black-source: #000000;
 $white-source: #ffffff;
+$teal-source: #24999e;
 
 $fontFamily: "Ubuntu", sans-serif;
 $fontSize: 23px;
@@ -57,6 +58,7 @@ body {
 	font-weight: 300;
 	line-height: 32px;
 	font-style: normal;
+	background-color: $white-50;
 }
 
 .wrapper {
@@ -89,5 +91,8 @@ body {
 	flex: 1 1 auto;
 }
 
+@import "base/buttons";
+@import "base/accordion";
 @import "blocks/header";
+@import "blocks/faq";
 @import "blocks/footer";

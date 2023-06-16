@@ -1,0 +1,160 @@
+/*! -- Accordion styles----------------------------- */
+
+.accordion {
+	display: flex;
+	flex-direction: column;
+	row-gap: 7px;
+	width: 100%;
+	max-width: 736px;
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: -782px;
+		background-image: url("../img/faq-decor-right.png");
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		z-index: 1;
+		width: 804.5px;
+		height: 804.5px;
+	}
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		row-gap: 16px;
+	}
+	&__btn {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		column-gap: 16px;
+		color: $black-source;
+		cursor: pointer;
+		padding: 8px 0px 8px 0px;
+		width: 100%;
+		border: none;
+		font-size: 23px;
+		line-height: 32px;
+		font-weight: 300;
+		text-align: left;
+		outline: none;
+		transition: all 0.2s;
+		position: relative;
+		svg {
+			flex-shrink: 0;
+			transition: all 0.2s;
+			path {
+				transition: all 0.2s;
+			}
+		}
+		&.active {
+			color: $teal-source;
+			svg {
+				transform: rotate(90deg);
+				path {
+					fill: $teal-source;
+				}
+			}
+			&::after {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $teal-source;
+				svg {
+					path {
+						fill: $teal-source;
+					}
+				}
+			}
+		}
+	}
+
+	&__text-holder {
+		max-height: 1px;
+		border-bottom: 1px solid $black-200;
+		overflow: hidden;
+		transition: max-height 0.2s ease-out;
+	}
+	&__list {
+		margin: -16px 0px 22px 0px;
+		li {
+			font-size: 16px;
+			line-height: 22px;
+			font-weight: 300;
+			color: $black-source;
+		}
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 22px;
+		font-weight: 300;
+		color: $black-source;
+		margin: 0px 0px 16px;
+	}
+	&__image-box {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		column-gap: 16px;
+		row-gap: 16px;
+		margin: 0px 0px 16px 0px;
+	}
+}
+
+@media (max-width: $md1) {
+	/*! -- Accordion styles----------------------------- */
+	.accordion {
+		row-gap: 16px;
+		max-width: 100%;
+		&::after {
+			display: none;
+		}
+		&__btn {
+			font-size: 16px;
+			line-height: 22px;
+			font-weight: 400;
+			padding: 4px 0px;
+			svg {
+				width: 24px;
+				height: 24px;
+			}
+		}
+		&__wrapper {
+			row-gap: 7px;
+		}
+		&__image-box {
+			column-gap: 0px;
+			margin: 0 -8px 8px;
+		}
+		&__image-holder {
+			width: 33.333%;
+			padding: 0 8px;
+			img {
+				max-width: 100%;
+				width: 100%;
+				max-height: 80px;
+				object-fit: cover;
+				border: 2px solid $black-300;
+				border-radius: 4px;
+			}
+		}
+		&__text {
+			font-size: 13px;
+			line-height: 18px;
+			margin: 0px 0px 8px 0px;
+		}
+		&__list {
+			margin: -8px 0px 10px 0px;
+			li {
+				font-size: 13px;
+				line-height: 18px;
+			}
+		}
+	}
+}

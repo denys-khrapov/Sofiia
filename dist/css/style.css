@@ -668,8 +668,155 @@ body.lock {
   margin: 0px 0px 48px 0px;
 }
 
+/*! -- Contacts styles----------------------------- */
+
+.contacts {
+  padding: 256px 0px 128px;
+  background-color: #000000;
+}
+
+.contacts__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.contacts__left-column {
+  width: 100%;
+  max-width: 558px;
+  position: relative;
+}
+
+.no-webp .contacts__left-column::after {
+  background-image: url("../img/contacts-art-left.png");
+}
+
+.contacts__left-column::after {
+  content: "";
+  position: absolute;
+  top: -145%;
+  right: -170px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 1128px;
+  height: 1014px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.contacts__right-column {
+  width: 100%;
+  max-width: 356px;
+}
+
+.contacts__right-column p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  color: rgb(198, 198, 198);
+  margin: 0px 0px 8px 0px;
+}
+
+.contacts__left-inner {
+  width: 100%;
+  max-width: 330px;
+  position: relative;
+  z-index: 2;
+}
+
+.contacts__svg-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px 0px 48px 0px;
+}
+
+.contacts__title {
+  font-size: 75px;
+  font-weight: 500;
+  line-height: 68px;
+  letter-spacing: -0.075em;
+  color: rgb(243, 243, 243);
+}
+
+.contacts__phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-column-gap: 16px;
+  -moz-column-gap: 16px;
+  column-gap: 16px;
+  color: rgb(243, 243, 243);
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  margin: 0px 0px 32px 0px;
+}
+
+.contacts__email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-column-gap: 8px;
+  -moz-column-gap: 8px;
+  column-gap: 8px;
+  color: #24999e;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  margin: 0px 0px 36px 0px;
+}
+
+.social__title {
+  font-size: 16px;
+  line-height: 22px;
+  color: rgb(198, 198, 198);
+  font-weight: 300;
+  margin: 0px 0px 16px 0px;
+}
+
+.social__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-column-gap: 24px;
+  -moz-column-gap: 24px;
+  column-gap: 24px;
+}
+
 .webp .accordion::after {
   background-image: url(../img/faq-decor-right.webp);
+}
+
+.webp .contacts__left-column::after {
+  background-image: url(../img/contacts-art-left.webp);
 }
 
 @media (max-width: 1199px) {
@@ -945,8 +1092,142 @@ body.lock {
     line-height: 22px;
   }
 
+  /*! -- Contacts styles----------------------------- */
+
+  .contacts {
+    padding: 64px 0px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contacts .container {
+    padding: 0 16px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .no-webp .contacts::after {
+    background-image: url("../img/contacts-art-left-1199.png");
+  }
+
+  .contacts::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 43%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 744px;
+    height: 741px;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .contacts__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .contacts__left-column {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contacts__left-column::after {
+    display: none;
+  }
+
+  .contacts__right-column {
+    width: 100%;
+    max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .contacts__right-column p {
+    text-align: center;
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .contacts__svg-holder {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .contacts__left-inner {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .contacts__phone {
+    font-size: 23px;
+    line-height: 32px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0px 0px 24px 0px;
+  }
+
+  .contacts__email {
+    margin: 0px 0px 24px 0px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .contacts__svg-holder {
+    width: 152px;
+    height: 27px;
+    margin: 0 auto 32px;
+  }
+
+  .contacts__svg-holder svg {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  .contacts__title {
+    font-size: 50px;
+    line-height: 45px;
+    margin: 0px 0px 24px 0px;
+  }
+
+  .social__title {
+    text-align: center;
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .social__links {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
   .webp .faq__right-column::before {
     background-image: url(../img/faq-decor-right-1199.webp);
+  }
+
+  .webp .contacts::after {
+    background-image: url(../img/contacts-art-left-1199.webp);
   }
 }
 

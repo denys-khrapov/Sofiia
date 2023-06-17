@@ -27,13 +27,14 @@
 		box-shadow: 0 0 0 3px #008085;
 		border-radius: 4px;
 		outline: none;
+		color: $teal-source;
 	}
 	&.blocked {
-		color: $black-900;
-		pointer-events: none;
+		color: $black-900 !important;
+		pointer-events: none !important;
 		svg {
 			path {
-				fill: $black-900;
+				fill: $black-900 !important;
 			}
 		}
 	}

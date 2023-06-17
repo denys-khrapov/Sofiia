@@ -303,15 +303,16 @@ body.lock {
   box-shadow: 0 0 0 3px #008085;
   border-radius: 4px;
   outline: none;
+  color: #24999e;
 }
 
 .link.blocked {
-  color: rgb(57, 57, 57);
-  pointer-events: none;
+  color: rgb(57, 57, 57) !important;
+  pointer-events: none !important;
 }
 
 .link.blocked svg path {
-  fill: rgb(57, 57, 57);
+  fill: rgb(57, 57, 57) !important;
 }
 
 /*! -- Accordion styles----------------------------- */
@@ -811,6 +812,87 @@ body.lock {
   column-gap: 24px;
 }
 
+/*! -- Footer styles----------------------------- */
+
+.footer {
+  padding: 32px 0px 64px;
+  background-color: #000000;
+  position: relative;
+}
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-column-gap: 140px;
+  -moz-column-gap: 140px;
+  column-gap: 140px;
+}
+
+.footer .menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.footer__left-column {
+  width: calc(100% - 326px);
+}
+
+.footer__right-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  max-width: 326px;
+}
+
+.footer .copyright {
+  color: rgb(113, 113, 113);
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.footer .shapovalAgency-link {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.footer .shapovalAgency-link svg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .link {
+  color: rgb(243, 243, 243);
+}
+
+.footer .link:focus {
+  color: #24999e;
+}
+
 .webp .accordion::after {
   background-image: url(../img/faq-decor-right.webp);
 }
@@ -1222,6 +1304,53 @@ body.lock {
     justify-content: center;
   }
 
+  /*! -- Footer styles----------------------------- */
+
+  .footer {
+    padding: 16px 0px;
+  }
+
+  .footer .container {
+    padding: 0px 16px;
+  }
+
+  .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-column-gap: 0px;
+    -moz-column-gap: 0px;
+    column-gap: 0px;
+    row-gap: 71px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .footer__left-column {
+    max-width: 450px;
+    width: 100%;
+  }
+
+  .footer .link {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 300;
+  }
+
+  .footer__right-column {
+    width: 100%;
+    max-width: 100%;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+  }
+
+  .footer .shapovalAgency-link {
+    bottom: 16px;
+  }
+
   .webp .faq__right-column::before {
     background-image: url(../img/faq-decor-right-1199.webp);
   }
@@ -1246,6 +1375,25 @@ body.lock {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: end;
+  }
+
+  .footer {
+    /*! -- Footer styles----------------------------- */
+  }
+
+  .footer .copyright {
+    margin-right: 130px;
+  }
+
+  .footer__container {
+    row-gap: 32px;
+  }
+
+  .footer__right-column {
+    min-height: 53px;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: end;
   }
 }
 
@@ -1333,6 +1481,34 @@ body.lock {
 
   .webp .faq__left-column::before {
     background-image: url(../img/faq-decor-right-1199.webp);
+  }
+}
+
+@media (max-width: 500px) {
+  /*! -- Footer styles----------------------------- */
+
+  .footer .container {
+    padding: 0;
+  }
+
+  .footer .menu__list {
+    white-space: nowrap;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    width: 100%;
+    padding-left: 8px;
+    -webkit-column-gap: 8px;
+    -moz-column-gap: 8px;
+    column-gap: 8px;
+  }
+
+  .footer .menu__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .footer__right-column {
+    padding: 0 16px;
   }
 }
 

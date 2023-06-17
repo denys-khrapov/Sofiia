@@ -1,6 +1,7 @@
 jQuery(document).ready(function ($) {
 	testWebPFunction();
 	initAccordion();
+	initSwiper();
 });
 
 function testWebPFunction() {
@@ -54,4 +55,28 @@ for (i = 0; i < acc.length; i++) {
 window.addEventListener("resize", openFirstAccordion);
 
 
+}
+
+function initSwiper(){
+
+	let swiperStages = new Swiper('.stages-slider', {
+		slidesPerView: 'auto',
+		scrollbar:{
+			el:'.swiper-scrollbar',
+			draggable: false,
+		},
+		breakpoints:{
+			320:{
+				spaceBetween: 16,
+				loop: false,
+			},
+			1200	:{
+				spaceBetween: 24,
+				loop: false,
+				scrollbar:{
+					draggable: true,
+				},
+			}
+		}
+	});
 }

@@ -14,11 +14,6 @@
 		width: calc(100% - 451px);
 	}
 	&__suptitle {
-		font-size: 24px;
-		font-weight: 700;
-		text-transform: uppercase;
-		line-height: 36px;
-		color: $teal-source;
 		margin: 0px 0px 24px 0px;
 	}
 	&__title {
@@ -37,10 +32,6 @@
 		&__header {
 			margin: 0px 0px 64px 0px;
 			column-gap: 24px;
-		}
-		&__suptitle {
-			font-size: 16px;
-			line-height: 24px;
 		}
 		&__title {
 			font-size: 32px;

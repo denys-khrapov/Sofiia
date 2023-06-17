@@ -173,6 +173,27 @@ body.lock {
   padding: 0 16px;
 }
 
+.title {
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 55px;
+  letter-spacing: -0.05em;
+}
+
+.title span {
+  font-weight: 300;
+  font-style: italic;
+  color: #24999e;
+}
+
+.suptitle {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 36px;
+  color: #24999e;
+}
+
 .content {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
@@ -441,6 +462,100 @@ body.lock {
   margin: 0px 0px 16px 0px;
 }
 
+/*! -- Stages styles----------------------------- */
+
+.stages {
+  padding: 128px 0px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(47.66%, #f3f3f3), color-stop(47.67%, #000000));
+  background: linear-gradient(180deg, #f3f3f3 47.66%, #000000 47.67%);
+}
+
+.stages__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 128px;
+}
+
+.stages__header {
+  max-width: 546px;
+}
+
+.stages__suptitle {
+  margin: 0px 0px 32px 0px;
+}
+
+.stages__swiper-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.stages-slider {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.stages-slider__text-holder {
+  padding: 24px;
+  background-color: #ffffff;
+}
+
+.stages-slider__text-holder > svg {
+  margin: 0px 0px 24px 0px;
+}
+
+.stages-slider__text-holder h3 {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 35px;
+  letter-spacing: -0.05em;
+  margin: 0px 0px 24px 0px;
+}
+
+.stages-slider__text-holder p {
+  font-size: 16px;
+  line-height: 22px;
+  color: rgb(57, 57, 57);
+}
+
+.stages-slider__text-holder .btn-full {
+  margin: 24px 0px 0px 0px;
+  padding: 16px;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.stages-slider__image-holder img {
+  height: 100%;
+}
+
+.stages .swiper-slide {
+  width: 356px;
+  height: auto;
+}
+
+.stages .swiper-scrollbar {
+  margin: 64px 0px 0px 0px;
+  position: static;
+  width: 100%;
+  cursor: pointer;
+  background-color: #ffffff;
+  border-radius: 0;
+}
+
+.stages .swiper-scrollbar .swiper-scrollbar-drag {
+  background-color: #24999e;
+  border-radius: 0;
+}
+
 /*! -- Faq styles----------------------------- */
 
 .faq {
@@ -467,11 +582,6 @@ body.lock {
 }
 
 .faq__suptitle {
-  font-size: 24px;
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 36px;
-  color: #24999e;
   margin: 0px 0px 24px 0px;
 }
 
@@ -522,20 +632,6 @@ body.lock {
   width: calc(100% - 261px);
 }
 
-.instagram__title {
-  font-size: 50px;
-  font-weight: 400;
-  line-height: 55px;
-  letter-spacing: -0.05em;
-  margin: 0px 0px 48px 0px;
-}
-
-.instagram__title span {
-  font-weight: 300;
-  font-style: italic;
-  color: #24999e;
-}
-
 .instagram__link-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -568,6 +664,10 @@ body.lock {
   row-gap: 24px;
 }
 
+.instagram__title {
+  margin: 0px 0px 48px 0px;
+}
+
 .webp .accordion::after {
   background-image: url(../img/faq-decor-right.webp);
 }
@@ -576,6 +676,16 @@ body.lock {
   .container {
     max-width: 100%;
     padding: 0 32px;
+  }
+
+  .title {
+    font-size: 32px;
+    line-height: 35px;
+  }
+
+  .suptitle {
+    font-size: 16px;
+    line-height: 24px;
   }
 
   /*! -- Buttons styles----------------------------- */
@@ -656,6 +766,78 @@ body.lock {
     line-height: 18px;
   }
 
+  /*! -- Stages styles----------------------------- */
+
+  .stages {
+    padding: 64px 0px;
+  }
+
+  .stages__container {
+    row-gap: 64px;
+  }
+
+  .stages__header {
+    max-width: 100%;
+  }
+
+  .stages__suptitle {
+    margin: 0px 0px 24px 0px;
+  }
+
+  .stages .swiper-scrollbar {
+    margin: 32px 0px 0px 0px;
+  }
+
+  .stages .swiper-slide {
+    width: 288px;
+  }
+
+  .stages-slider {
+    cursor: default;
+  }
+
+  .stages-slider__text-holder {
+    padding: 24px 16px;
+  }
+
+  .stages-slider__text-holder > svg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 24px;
+    height: 24px;
+    margin: 0px 0px 16px 0px;
+  }
+
+  .stages-slider__text-holder h3 {
+    font-size: 23px;
+    line-height: 32px;
+    margin: 0px 0px 16px 0px;
+  }
+
+  .stages-slider__text-holder p {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .stages-slider__text-holder .btn-full {
+    margin: 16px 0px 0px 0px;
+  }
+
+  .stages-slider__image-holder {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 32px;
+    height: 100%;
+  }
+
+  .stages-slider__image-holder img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
   /*! -- Faq styles----------------------------- */
 
   .faq {
@@ -667,11 +849,6 @@ body.lock {
     -webkit-column-gap: 24px;
     -moz-column-gap: 24px;
     column-gap: 24px;
-  }
-
-  .faq__suptitle {
-    font-size: 16px;
-    line-height: 24px;
   }
 
   .faq__title {
@@ -724,8 +901,6 @@ body.lock {
   }
 
   .instagram__title {
-    font-size: 32px;
-    line-height: 35px;
     margin: 0px 0px 24px 0px;
   }
 

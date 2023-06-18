@@ -56,20 +56,6 @@
 		width: 356px;
 		height: auto;
 	}
-	.swiper-scrollbar {
-		margin: 64px 0px 0px 0px;
-		position: static;
-		width: 100%;
-		// margin-left: auto;
-		// margin-right: auto;
-		cursor: pointer;
-		background-color: $white-source;
-		border-radius: 0;
-		.swiper-scrollbar-drag {
-			background-color: $teal-source;
-			border-radius: 0;
-		}
-	}
 }
 
 @media (max-width: $md1) {
@@ -85,9 +71,7 @@
 		&__suptitle {
 			margin: 0px 0px 24px 0px;
 		}
-		.swiper-scrollbar {
-			margin: 32px 0px 0px 0px;
-		}
+
 		.swiper-slide {
 			width: 288px;
 		}

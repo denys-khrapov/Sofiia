@@ -2,6 +2,7 @@ jQuery(document).ready(function ($) {
 	testWebPFunction();
 	initAccordion();
 	initSwiper();
+	initReadMore();
 });
 
 function testWebPFunction() {
@@ -63,7 +64,7 @@ function initSwiper(){
 		slidesPerView: 'auto',
 		scrollbar:{
 			el:'.swiper-scrollbar',
-			draggable: false,
+			draggable: true,
 		},
 		breakpoints:{
 			320:{
@@ -73,10 +74,58 @@ function initSwiper(){
 			1200	:{
 				spaceBetween: 24,
 				loop: false,
-				scrollbar:{
-					draggable: true,
-				},
+			}
+		}
+	});
+
+	let swiperReviews = new Swiper('.reviews-slider', {
+		slidesPerView: 'auto',
+		scrollbar:{
+			el:'.swiper-scrollbar',
+			draggable: true,
+		},
+		breakpoints:{
+			320:{
+				spaceBetween: 16,
+				loop: false,
+			},
+			1200	:{
+				spaceBetween: 24,
+				loop: false,
 			}
 		}
 	});
 }
+
+function initReadMore() {
+	const more = $(".read-more");
+ 
+	if (more) {
+	  more.click(function (e) {
+		 var currentMoreBtn = jQuery(this);
+		 var contentHolder = currentMoreBtn.closest(".reviews-slide__inner");
+		 var content = contentHolder.find(".content-inner");
+		 var contentFull = contentHolder.find(".content-full");
+		 var open = currentMoreBtn.hasClass('show');
+ 
+		 if (open) {
+			content.removeAttr("style");
+			currentMoreBtn.removeClass('show');
+		 } else {
+			content.css("max-height", contentFull.height());
+			currentMoreBtn.addClass('show');
+		 }
+	  });
+ 
+	  $(".reviews-slide__inner").mouseleave(function () {
+		 var currentContentHolder = jQuery(this);
+		 var currentMoreBtn = currentContentHolder.find(".read-more");
+ 
+		 if (currentMoreBtn.hasClass('show')) {
+			currentContentHolder.find(".content-inner").removeAttr("style");
+			currentMoreBtn.removeClass('show');
+		 }
+	  });
+	}
+ }
+ 

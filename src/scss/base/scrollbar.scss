@@ -1,6 +1,7 @@
 /*! -- Scrollbar styles----------------------------- */
 
-#scrollbar-js {
+#scrollbar-reviews,
+#scrollbar-stages {
 	margin: 64px 0px 0px 0px;
 	position: static;
 	width: 100%;
@@ -17,7 +18,8 @@
 
 @media (max-width: $md1) {
 	/*! -- Scrollbar styles----------------------------- */
-	#scrollbar-js {
+	#scrollbar-reviews,
+	#scrollbar-stages {
 		margin: 32px 0px 0px 0px;
 	}
 }

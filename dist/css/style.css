@@ -262,7 +262,8 @@ body.lock {
 
 /*! -- Scrollbar styles----------------------------- */
 
-#scrollbar-js {
+#scrollbar-reviews,
+#scrollbar-stages {
   margin: 64px 0px 0px 0px;
   position: static;
   width: 100%;
@@ -271,7 +272,8 @@ body.lock {
   border-radius: 0;
 }
 
-#scrollbar-js .swiper-scrollbar-drag {
+#scrollbar-reviews .swiper-scrollbar-drag,
+#scrollbar-stages .swiper-scrollbar-drag {
   background-color: #24999e;
   border-radius: 0;
 }
@@ -479,6 +481,14 @@ body.lock {
   margin: 0px 0px 16px 0px;
 }
 
+.accordion__image-holder a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  cursor: pointer;
+}
+
 /*! -- Stages styles----------------------------- */
 
 .stages {
@@ -669,6 +679,14 @@ body.lock {
 
 .instagram__title {
   margin: 0px 0px 48px 0px;
+}
+
+.instagram__image-holder a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  cursor: pointer;
 }
 
 /*! -- Reviews styles----------------------------- */
@@ -1044,7 +1062,8 @@ body.lock {
 
   /*! -- Scrollbar styles----------------------------- */
 
-  #scrollbar-js {
+  #scrollbar-reviews,
+  #scrollbar-stages {
     margin: 32px 0px 0px 0px;
   }
 

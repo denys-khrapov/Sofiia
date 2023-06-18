@@ -129,3 +129,7 @@ function initReadMore() {
 	}
  }
  
+
+
+ Fancybox.bind('[data-fancybox]', {
+ });  

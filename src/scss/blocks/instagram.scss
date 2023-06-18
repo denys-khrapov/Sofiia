@@ -34,6 +34,13 @@
 	&__title {
 		margin: 0px 0px 48px 0px;
 	}
+	&__image-holder {
+		a {
+			display: flex;
+			height: 100%;
+			cursor: pointer;
+		}
+	}
 }
 
 @media (max-width: $md1) {

@@ -2,6 +2,7 @@ jQuery(document).ready(function ($) {
 	testWebPFunction();
 	initAccordion();
 	initSwiper();
+	initSlick();
 	initReadMore();
 });
 
@@ -127,9 +128,19 @@ function initReadMore() {
 		 }
 	  });
 	}
- }
- 
+}
 
+function initSlick(){
+	$('.logos-slider').slick({
+		dots: false,
+		arrows:false,
+		autoplay: true,
+		infinite: true,
+		speed: 400,
+		autoplaySpeed: 2000,
+		variableWidth: true,
+	 });
+}
 
- Fancybox.bind('[data-fancybox]', {
- });  
+Fancybox.bind('[data-fancybox]', {
+});  

@@ -489,6 +489,10 @@ body.lock {
   cursor: pointer;
 }
 
+.accordion__image-holder picture {
+  width: 100%;
+}
+
 /*! -- Stages styles----------------------------- */
 
 .stages {
@@ -567,6 +571,46 @@ body.lock {
 .stages .swiper-slide {
   width: 356px;
   height: auto;
+}
+
+/*! -- Logos styles----------------------------- */
+
+.logos {
+  padding: 128px 0px;
+}
+
+.logos__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-column-gap: 24px;
+  -moz-column-gap: 24px;
+  column-gap: 24px;
+  margin: 0px 0px 96px 0px;
+}
+
+.logos__left-column {
+  width: 100%;
+  max-width: 261px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.logos__title {
+  margin: 0px 0px 48px 0px;
+}
+
+.logos-slide {
+  width: 150px;
+}
+
+.logos-slide__image-holder img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 /*! -- Faq styles----------------------------- */
@@ -738,6 +782,11 @@ body.lock {
 
 .reviews__text {
   margin: 0px 0px 32px 0px;
+}
+
+.reviews-slider {
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
 .reviews-slide {
@@ -1199,6 +1248,45 @@ body.lock {
     object-fit: cover;
   }
 
+  /*! -- Logos styles----------------------------- */
+
+  .logos {
+    padding: 64px 0px;
+  }
+
+  .logos__right-column p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .logos-slider .slick-list {
+    margin: 0 -8px;
+  }
+
+  .logos__header {
+    margin: 0px 0px 32px 0px;
+  }
+
+  .logos__title {
+    margin: 0px 0px 24px 0px;
+  }
+
+  .logos-slide {
+    width: 94px;
+    padding: 0 8px;
+  }
+
+  .logos-slide__image-holder {
+    max-width: 78px;
+  }
+
+  .logos-slide__image-holder img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
   /*! -- Faq styles----------------------------- */
 
   .faq {
@@ -1334,6 +1422,10 @@ body.lock {
     font-size: 16px;
     line-height: 22px;
     margin: 0px 0px 24px 0px;
+  }
+
+  .reviews-slider {
+    cursor: default;
   }
 
   .reviews-slide {
@@ -1606,6 +1698,24 @@ body.lock {
 @media (max-width: 575px) {
   .container {
     padding: 0 16px;
+  }
+
+  /*! -- Logos styles----------------------------- */
+
+  .logos__header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-column-gap: 0px;
+    -moz-column-gap: 0px;
+    column-gap: 0px;
+    row-gap: 24px;
+  }
+
+  .logos__left-column {
+    width: 100%;
+    max-width: 100%;
   }
 
   /*! -- Faq styles----------------------------- */

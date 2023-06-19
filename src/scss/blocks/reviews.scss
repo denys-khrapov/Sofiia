@@ -27,6 +27,9 @@
 	&__text {
 		margin: 0px 0px 32px 0px;
 	}
+	&-slider {
+		cursor: grab;
+	}
 	&-slide {
 		width: 356px;
 		min-height: 376px;
@@ -100,6 +103,9 @@
 			font-size: 16px;
 			line-height: 22px;
 			margin: 0px 0px 24px 0px;
+		}
+		&-slider {
+			cursor: default;
 		}
 		&-slide {
 			width: 288px;

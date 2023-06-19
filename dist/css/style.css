@@ -493,6 +493,136 @@ body.lock {
   width: 100%;
 }
 
+/*! -- What styles----------------------------- */
+
+.what {
+  position: relative;
+  padding: 128px 0px;
+}
+
+.no-webp .what::after {
+  background-image: url("../img/what-right-decor.png");
+}
+
+.what::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -425px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 754px;
+  height: 800px;
+  z-index: 1;
+}
+
+.what__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 96px;
+  position: relative;
+  z-index: 2;
+}
+
+.what__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-column-gap: 119px;
+  -moz-column-gap: 119px;
+  column-gap: 119px;
+}
+
+.what__suptitle {
+  margin: 0px 0px 32px 0px;
+}
+
+.what__left-column {
+  width: 100%;
+  max-width: 451px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.what-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-column-gap: 24px;
+  -moz-column-gap: 24px;
+  column-gap: 24px;
+}
+
+.what-card {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.what-card__right-column {
+  width: 100%;
+  max-width: 226px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.what-card__left-column {
+  background-color: #ffffff;
+  padding: 0px 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.what-card__svg-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px 0px 32px 0px;
+}
+
+.what-card__title {
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  margin: 0px 0px 32px 0px;
+}
+
+.what-card__text {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 25px;
+  letter-spacing: 0.01em;
+  color: rgb(57, 57, 57);
+}
+
+.what-card p + p {
+  margin: 25px 0px 0px 0px;
+}
+
 /*! -- Stages styles----------------------------- */
 
 .stages {
@@ -1075,6 +1205,10 @@ body.lock {
   background-image: url(../img/faq-decor-right.webp);
 }
 
+.webp .what::after {
+  background-image: url(../img/what-right-decor.webp);
+}
+
 .webp .contacts__left-column::after {
   background-image: url(../img/contacts-art-left.webp);
 }
@@ -1178,6 +1312,108 @@ body.lock {
   .accordion__list li {
     font-size: 13px;
     line-height: 18px;
+  }
+
+  /*! -- What styles----------------------------- */
+
+  .what {
+    padding: 64px 0px;
+  }
+
+  .no-webp .what::after {
+    background-image: url("../img/what-right-decor-1199.png");
+  }
+
+  .what::after {
+    width: 434px;
+    height: 400px;
+    bottom: unset;
+    top: -20px;
+  }
+
+  .what__container {
+    row-gap: 64px;
+  }
+
+  .what__header {
+    -webkit-column-gap: 16px;
+    -moz-column-gap: 16px;
+    column-gap: 16px;
+  }
+
+  .what__text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .what__left-column,
+  .what__right-column {
+    width: 50%;
+    max-width: 100%;
+  }
+
+  .what__suptitle {
+    margin: 0px 0px 24px 0px;
+  }
+
+  .what__cards {
+    -webkit-column-gap: 16px;
+    -moz-column-gap: 16px;
+    column-gap: 16px;
+  }
+
+  .what-card__left-column {
+    padding: 24px 16px;
+    width: 52.83%;
+    max-width: 100%;
+  }
+
+  .what-card__right-column {
+    width: 47.17%;
+    max-width: 100%;
+  }
+
+  .what-card__svg-holder {
+    width: 24px;
+    height: 24px;
+    margin: 0px 0px 16px 0px;
+  }
+
+  .what-card__svg-holder svg {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  .what-card__title {
+    font-size: 23px;
+    line-height: 32px;
+    margin: 0px 0px 16px 0px;
+  }
+
+  .what-card__text {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .what-card__image-holder {
+    position: relative;
+    height: 100%;
+  }
+
+  .what-card__image-holder img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  .what-card p + p {
+    margin: 18px 0px 0px 0px;
   }
 
   /*! -- Stages styles----------------------------- */
@@ -1633,6 +1869,10 @@ body.lock {
     bottom: 16px;
   }
 
+  .webp .what::after {
+    background-image: url(../img/what-right-decor-1199.webp);
+  }
+
   .webp .faq__right-column::before {
     background-image: url(../img/faq-decor-right-1199.webp);
   }
@@ -1698,6 +1938,41 @@ body.lock {
 @media (max-width: 575px) {
   .container {
     padding: 0 16px;
+  }
+
+  /*! -- What styles----------------------------- */
+
+  .what__header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-column-gap: 0px;
+    -moz-column-gap: 0px;
+    column-gap: 0px;
+    row-gap: 24px;
+  }
+
+  .what__left-column,
+  .what__right-column {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .what__cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-column-gap: 0px;
+    -moz-column-gap: 0px;
+    column-gap: 0px;
+    row-gap: 16px;
+  }
+
+  .what-card {
+    width: 100%;
+    max-width: 100%;
   }
 
   /*! -- Logos styles----------------------------- */

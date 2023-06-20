@@ -19,6 +19,11 @@
 	}
 	&-slider {
 		cursor: grab;
+		position: relative;
+		z-index: 3;
+		.swiper-wrapper {
+			z-index: 3;
+		}
 		&__text-holder {
 			padding: 24px;
 			background-color: $white-source;

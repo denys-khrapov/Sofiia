@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="img/favico.svg">
+	<!-- <script src="https://www.google.com/recaptcha/api.js?render="></script> -->
 	<link rel="stylesheet" href="css/swiper-bundle.min.css">
 	<link rel="stylesheet" href="css/fancybox.min.css">
 	<link rel="stylesheet" href="css/slick.min.css">
@@ -102,22 +103,22 @@
 			</div>
 			<ul class="header__list">
 				<li class="menu-item  current-menu-item current_page_item">
-					<a class="header__link scroll-to" href="#section-hero">Що роблю</a>
+					<a class="header__link scroll-to" href="#section-what">Що роблю</a>
 				</li>
 				<li class="menu-item">
-					<a class="header__link scroll-to" href="#section-about">Експертиза</a>
+					<a class="header__link scroll-to" href="#section-expertis">Експертиза</a>
 				</li>
 				<li class="menu-item">
-					<a class="header__link scroll-to" href="#section-portfolio">Переваги</a>
+					<a class="header__link scroll-to" href="#section-choose">Переваги</a>
 				</li>
 				<li class="menu-item">
-					<a class="header__link scroll-to" href="#section-faq">Контакти</a>
+					<a class="header__link scroll-to" href="#section-contacts">Контакти</a>
 				</li>
 				<li class="menu-item">
-					<a class="header__link scroll-to" href="#section-contacts">Послуги</a>
+					<a class="header__link scroll-to" href="#section-services">Послуги</a>
 				</li>
 			</ul>
-			<a class="btn-full" href="#">
+			<a class="btn-full scroll-to" href="#section-cta">
 				КОНСУЛЬТАЦІЯ
 				<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd" clip-rule="evenodd"
@@ -306,7 +307,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="section-what what">
+			<section class="section-what what" id="section-what">
 				<div class="what__container container">
 					<div class="what__header">
 						<div class="what__left-column">
@@ -379,7 +380,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="section-expertis expertis">
+			<section class="section-expertis expertis" id="section-expertis">
 				<div class="expertis__container container">
 					<div class="expertis__header">
 						<div class="expertis__left-column">
@@ -475,7 +476,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="section-choose choose">
+			<section class="section-choose choose" id="section-choose">
 				<div class="choose__container container">
 					<div class="choose__left-column">
 						<div class="choose__image-holder">
@@ -638,7 +639,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="section-cta cta">
+			<section class="section-cta cta" id="section-cta">
 				<div class="cta__container container">
 					<div class="cta__header">
 						<p>Вершини успіху досягаються як силою дій, та й силою думки. <span>Розбудіть у собі
@@ -677,13 +678,13 @@
 									</div>
 									<div class="form__radio-holder">
 										<h4>ОБЕРІТЬ НАПРЯМОК:</h4>
-										<span><input type="radio" id="coaching" name="direction" value="КОУЧІНГ"><label
-												for="coaching">КОУЧІНГ</label></span>
-										<span><input type="radio" id="planning" name="direction"
+										<span><input class="direction-client" type="radio" id="coaching" name="direction-client"
+												value="КОУЧІНГ"><label for="coaching">КОУЧІНГ</label></span>
+										<span><input class="direction-client" type="radio" id="planning" name="direction-client"
 												value="СТРАТЕГІЧНЕ ПЛАНУВАННЯ"><label for="planning">СТРАТЕГІЧНЕ
 												ПЛАНУВАННЯ</label></span>
-										<span><input type="radio" id="mentoring" name="direction" value="НАСТАВНИЦТВО"><label
-												for="mentoring">НАСТАВНИЦТВО</label></span>
+										<span><input class="direction-client" type="radio" id="mentoring" name="direction-client"
+												value="НАСТАВНИЦТВО"><label for="mentoring">НАСТАВНИЦТВО</label></span>
 									</div>
 									<input type="hidden" name="url">
 									<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
@@ -712,8 +713,11 @@
 							<h3 class="logos__suptitle suptitle">досвід роботи</h3>
 						</div>
 						<div class="logos__right-column">
-							<h2 class="logos__title title">Протягом своєї кар'єри бізнес-коуча я <span>співпрацювала</span> з
-								багатьма підприємцями та компаніями,</h2>
+							<h2 class="logos__title title">Протягом своєї кар'єри бізнес-коуча я
+								<span>співпрацювала</span>
+								з
+								багатьма підприємцями та компаніями,
+							</h2>
 							<p>але особливо хотіла б виділити такі:</p>
 						</div>
 					</div>
@@ -1238,7 +1242,7 @@
 							<h2 class="reviews__title title">Всі вони вже <span>встигли співпрацювати</span> разом зі мною!
 							</h2>
 							<p class="reviews__text">Є що розповісти і вам? Надайте свій відгук зараз!</p>
-							<a class="btn-full" href="#">
+							<a class="btn-full blocked" href="#">
 								ЗАЛИШИТИ ВІДГУК
 								<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd"
@@ -1527,7 +1531,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="section-contacts contacts">
+			<section class="section-contacts contacts" id="section-contacts">
 	<div class="contacts__container container">
 		<div class="contacts__left-column">
 			<div class="contacts__left-inner">
@@ -1704,11 +1708,11 @@
 		<div class="footer__left-column">
 			<nav class="menu">
 				<ul class="menu__list">
-					<li class="menu__item"><a class="menu__link link" href="#">ЩО Я РОБЛЮ</a></li>
-					<li class="menu__item"><a class="menu__link link" href="#">ЕКСПЕРТИЗА</a></li>
-					<li class="menu__item"><a class="menu__link link" href="#">ПЕРЕВАГИ</a></li>
-					<li class="menu__item"><a class="menu__link link" href="#">КОНТАКТИ</a></li>
-					<li class="menu__item"><a class="menu__link link" href="#">ПОСЛУГИ</a></li>
+					<li class="menu__item"><a class="menu__link link scroll-to" href="#section-what">ЩО Я РОБЛЮ</a></li>
+					<li class="menu__item"><a class="menu__link link scroll-to" href="#section-expertis">ЕКСПЕРТИЗА</a></li>
+					<li class="menu__item"><a class="menu__link link scroll-to" href="#section-choose">ПЕРЕВАГИ</a></li>
+					<li class="menu__item"><a class="menu__link link scroll-to" href="#section-contacts">КОНТАКТИ</a></li>
+					<li class="menu__item"><a class="menu__link link scroll-to" href="#section-services">ПОСЛУГИ</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -1768,8 +1772,20 @@
 		</svg>
 	</a>
 </footer>
+		<button onclick="topFunction()" id="btn-up" title="Go to top" id="btn-up">
+			<div id="btn-up__svg-holder">
+				<svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd"
+						d="M6.01367 9.68017L7.48681 11.1533L11.9586 6.68155L11.9586 19.7917C11.9586 20.367 12.4249 20.8334 13.0002 20.8334C13.5755 20.8334 14.0419 20.367 14.0419 19.7917L14.0419 6.68155L18.5137 11.1533L19.9868 9.68017L13.0002 2.6936L6.01367 9.68017Z"
+						fill="#F3F3F3" />
+				</svg>
+			</div>
+		</button>
 	</div>
 	<script src="js/jquery-3.7.0.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/contactform.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/swiper-bundle.min.js"></script>
 	<script src="js/fancybox.umd.js"></script>

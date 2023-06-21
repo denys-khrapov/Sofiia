@@ -1,5 +1,30 @@
-/*! -- Contacts styles----------------------------- */
+@media (min-width: 1921px) {
+	/*! -- Contacts styles----------------------------- */
+	.contacts {
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			top: -187px;
+			left: 0;
+			background-image: url("../img/contacts-art-left.png");
+			background-position: center center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: 1128px;
+			height: 1004px;
+			z-index: 1;
+			pointer-events: none;
+		}
+		&__left-column {
+			&::after {
+				display: none;
+			}
+		}
+	}
+}
 
+/*! -- Contacts styles----------------------------- */
 .contacts {
 	padding: 256px 0px 128px;
 	background-color: $black-source;
@@ -22,7 +47,7 @@
 			background-size: cover;
 			background-repeat: no-repeat;
 			width: 1128px;
-			height: 1014px;
+			height: 1004px;
 			z-index: 1;
 			pointer-events: none;
 		}

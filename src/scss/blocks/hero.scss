@@ -1,3 +1,17 @@
+@media (min-width: 1921px) {
+	/*! -- Hero styles----------------------------- */
+	.hero {
+		&__header {
+			justify-content: space-between;
+		}
+		&__left-column {
+			&::after {
+				right: unset;
+				left: 0;
+			}
+		}
+	}
+}
 /*! -- Hero styles----------------------------- */
 .hero {
 	padding: 150px 0px 128px;
@@ -26,7 +40,7 @@
 			content: "";
 			position: absolute;
 			top: -150px;
-			right: -115px;
+			right: -107px;
 			background-image: url("../img/hero-art-left.png");
 			background-position: center center;
 			background-size: cover;

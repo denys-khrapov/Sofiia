@@ -260,6 +260,29 @@ body.lock {
   outline: none;
 }
 
+#btn-up {
+  display: none;
+  position: fixed;
+  bottom: 70px;
+  right: 15px;
+  z-index: 99;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: #24999e;
+  cursor: pointer;
+}
+
+#btn-up__svg-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 /*! -- Scrollbar styles----------------------------- */
 
 #scrollbar-reviews,
@@ -462,8 +485,6 @@ body.lock {
 
 /*! -- Inputs styles----------------------------- */
 
-/*! -- Inputs styles----------------------------- */
-
 input[type=text],
 input[type=tel] {
   width: 100%;
@@ -541,6 +562,10 @@ input[type=text].disabled,
 input[type=tel].disabled {
   pointer-events: none;
   background-color: rgb(176, 176, 176);
+}
+
+input.novalid {
+  border: 2px solid red;
 }
 
 /*! -- Accordion styles----------------------------- */
@@ -917,7 +942,7 @@ input[type=tel].disabled {
   content: "";
   position: absolute;
   top: -150px;
-  right: -115px;
+  right: -107px;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1956,7 +1981,7 @@ input[type=tel].disabled {
   background-size: cover;
   background-repeat: no-repeat;
   width: 1128px;
-  height: 1014px;
+  height: 1004px;
   z-index: 1;
   pointer-events: none;
 }
@@ -2236,6 +2261,19 @@ input[type=tel].disabled {
 }
 
 @media (min-width: 1921px) {
+  /*! -- Hero styles----------------------------- */
+
+  .hero__header {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .hero__left-column::after {
+    right: unset;
+    left: 0;
+  }
+
   /*! -- Expertis styles----------------------------- */
 
   .expertis {
@@ -2263,8 +2301,40 @@ input[type=tel].disabled {
     display: none;
   }
 
+  /*! -- Contacts styles----------------------------- */
+
+  .contacts {
+    position: relative;
+  }
+
+  .no-webp .contacts::after {
+    background-image: url("../img/contacts-art-left.png");
+  }
+
+  .contacts::after {
+    content: "";
+    position: absolute;
+    top: -187px;
+    left: 0;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1128px;
+    height: 1004px;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .contacts__left-column::after {
+    display: none;
+  }
+
   .webp .expertis::before {
     background-image: url(../img/expertis-left-decor.webp);
+  }
+
+  .webp .contacts::after {
+    background-image: url(../img/contacts-art-left.webp);
   }
 }
 

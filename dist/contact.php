@@ -4,7 +4,7 @@ define('SITE_KEY', '6LeS8ygmAAAAAHevT7-0kqokA8gd4n8e2pOxYnvI'); /* ключ са
 define('SECRET_KEY', '6LeS8ygmAAAAAEPOT1uc8XGNwLUWAu8Z8Uewjeyg'); /* секретный ключ reCaptcha */
 define("TELEGRAM_TOKEN", "6156186257:AAHqyZc2eBr8I4Vngdxfj5apdBi_3gXFhmo");
 define("TELEGRAM_CHAT_ID", "-1001773134156");
-define("SUBJECT", "Лист з сайту Test"); /* тема письма */
+define("SUBJECT", "Лист з сайту Sofiia"); /* тема письма */
 define("EMAIL_TO", "varfolomeisafronov@gmail.com"); /* куда отправляем */
 
 
@@ -15,7 +15,7 @@ if ($post) {
 	// $email = htmlspecialchars($_POST['email']);
 	$phone = htmlspecialchars($_POST['phone-client']);
 	// $message = htmlspecialchars($_POST['message']);
-	$call = $_POST['selectCall'];
+	$direction = $_POST['direction-client'];
 	$urlAll = $_POST['url'];
 	$error = '';
 
@@ -45,7 +45,7 @@ if ($post) {
 
 
 	// сообщение, которое будет отправлено в Telegram
-	$text = "Новое сообщение с сайта:\n\nІм\'я: $name\nТелефон: $phone\nКак связаться: $call\nСсылка: $urlAll";
+	$text = "Новое сообщение с сайта Sofiia:\n\nІм\'я: $name\nТелефон: $phone\nНапрямок: $direction\nСсылка: $urlAll";
 
 
 	if (!$error) {
@@ -67,9 +67,9 @@ if ($post) {
                     <td>Телефон</td>
                     <td>' . $phone . '</td>
                     </tr>
-                    <tr>
-                    <td>Як зв\'язатись?</td>
-                    <td>' . $call . '</td>
+						  <tr>
+                    <td>Напрямок</td>
+                    <td>' . $direction . '</td>
                     </tr>
                     <tr>
                     <td>Посилання</td>

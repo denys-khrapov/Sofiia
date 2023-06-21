@@ -3,6 +3,7 @@ jQuery(document).ready(function ($) {
 	initAccordion();
 	initSwiper();
 	initSlick();
+	initMobileMenu();
 	initReadMore();
 });
 
@@ -140,6 +141,47 @@ function initSlick(){
 		autoplaySpeed: 2000,
 		variableWidth: true,
 	 });
+}
+
+function initMobileMenu() {
+	const headerBurger = $('.header__burger');
+	const headerMenu = $('.header__menu');
+	const body = $('body');
+	const headerMenuLink = $('.header__link');
+	const headerBtnCall = $('.modal-call-btn');
+	const headerOverlay = $('.overlay');
+
+
+	headerBurger.on('click', function () {
+		headerBurger.toggleClass('active');
+		headerMenu.toggleClass('active');
+		body.toggleClass('lock');
+	});
+
+	headerOverlay.on('click', function () {
+		if (body.hasClass('lock') && headerMenu.hasClass('active') && headerBurger.hasClass('active')) {
+			body.removeClass('lock');
+			headerMenu.removeClass('active');
+			headerBurger.removeClass('active');
+		}
+	});
+
+	headerMenuLink.on('click', function () {
+		if (body.hasClass('lock') && headerMenu.hasClass('active') && headerBurger.hasClass('active')) {
+			body.removeClass('lock');
+			headerMenu.removeClass('active');
+			headerBurger.removeClass('active');
+		}
+	});
+
+	headerBtnCall.on('click', function(){
+		console.log('test');
+		if (body.hasClass('lock') && headerMenu.hasClass('active') && headerBurger.hasClass('active')) {
+			body.removeClass('lock');
+			headerMenu.removeClass('active');
+			headerBurger.removeClass('active');
+		}
+	});
 }
 
 Fancybox.bind('[data-fancybox]', {

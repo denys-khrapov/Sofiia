@@ -1,10 +1,14 @@
 jQuery(document).ready(function ($) {
 	testWebPFunction();
 	initAccordion();
-	initSwiper();
-	initSlick();
 	initMobileMenu();
 	initReadMore();
+	if ($('.stages-slider').length > 0 || $('.reviews-slider').length > 0) {
+		initSwiper();
+	}
+	if ($('.logos-slider').length > 0) {
+		initSlick();
+	}
 });
 
 function testWebPFunction() {
@@ -183,8 +187,8 @@ function initMobileMenu() {
 		}
 	});
 }
-
+if ($('[data-fancybox=""]').length > 0) {
 Fancybox.bind('[data-fancybox]', {
 });  
-
+}
 

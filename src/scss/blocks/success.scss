@@ -1,0 +1,78 @@
+/*! -- Success styles----------------------------- */
+.success {
+	padding: 130.5px 0px;
+	background-color: $black-source;
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 44%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-image: url("../img/success-art.png");
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		z-index: 1;
+		width: 608px;
+		height: 608px;
+		pointer-events: none;
+	}
+	&__container {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		row-gap: 64px;
+		max-width: 736px;
+		position: relative;
+		z-index: 2;
+	}
+	&__title {
+		color: $white-50;
+		font-weight: 700;
+		font-size: 160px;
+		line-height: 144px;
+		letter-spacing: -0.075em;
+	}
+	&__text {
+		font-size: 23px;
+		line-height: 32px;
+		font-weight: 700;
+		color: $white-50;
+	}
+}
+
+@media (max-width: $md1) {
+	/*! -- Success styles----------------------------- */
+	.success {
+		padding: 120px 0px;
+		&__container {
+			row-gap: 32px;
+			max-width: 288px;
+			padding: 0;
+		}
+		&__title {
+			font-size: 65px;
+			line-height: 58px;
+			font-weight: 500;
+		}
+		&__text {
+			font-size: 16px;
+			line-height: 22px;
+			font-weight: 400;
+		}
+		&::before {
+			top: 50%;
+		}
+	}
+}
+
+@media (max-width: $md4) {
+	/*! -- Success styles----------------------------- */
+	.success {
+		&__container {
+			padding: 0px 12px;
+		}
+	}
+}

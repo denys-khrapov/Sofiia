@@ -186,3 +186,5 @@ function initMobileMenu() {
 
 Fancybox.bind('[data-fancybox]', {
 });  
+
+

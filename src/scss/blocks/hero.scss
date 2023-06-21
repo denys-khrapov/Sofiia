@@ -170,6 +170,13 @@
 
 @media (max-width: $md1) {
 	/*! -- Hero styles----------------------------- */
+	body {
+		&.lock {
+			.hero__right-column {
+				padding-right: 17px;
+			}
+		}
+	}
 	.hero {
 		padding: 64px 0px;
 		&__container {

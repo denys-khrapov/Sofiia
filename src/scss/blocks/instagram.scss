@@ -103,7 +103,7 @@
 			width: 56%;
 		}
 		&__link-box {
-			justify-content: end;
+			justify-content: flex-end;
 		}
 	}
 }
@@ -122,7 +122,7 @@
 			max-width: 100%;
 		}
 		&__link-box {
-			justify-content: start;
+			justify-content: flex-start;
 		}
 		&__image-holder {
 			img {

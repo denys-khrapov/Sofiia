@@ -73,7 +73,7 @@
 		&__right-column {
 			width: 100%;
 			max-width: 100%;
-			justify-content: start;
+			justify-content: flex-start;
 		}
 		.shapovalAgency-link {
 			bottom: 16px;
@@ -92,7 +92,7 @@
 		}
 		&__right-column {
 			min-height: 53px;
-			align-items: end;
+			align-items: flex-end;
 		}
 	}
 }

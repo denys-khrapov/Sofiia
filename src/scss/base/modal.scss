@@ -1,0 +1,261 @@
+.modal-buy-common .modal-buy {
+	display: none;
+}
+
+.modal-buy-common.show-buy .modal-look {
+	display: none;
+}
+
+.modal-buy-common.show-buy .modal-buy {
+	display: flex;
+}
+
+.modal-buy-common.show-look .modal-buy {
+	display: none;
+}
+
+.modal-buy-common.show-look .modal-look {
+	display: flex;
+}
+
+.btn-back {
+	position: absolute;
+	right: 82px;
+	top: 16px;
+	width: 50px;
+	height: 50px;
+	background-color: $teal-source;
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+.modal-buy-common {
+	padding: 32px;
+	.fancybox-close-small {
+		top: 16px;
+		right: 16px;
+		width: 50px;
+		height: 50px;
+		border-radius: 0;
+		background-color: $teal-source;
+		svg {
+			path {
+				color: #fff;
+			}
+		}
+	}
+}
+.modal-buy {
+	max-width: 1052px;
+	&__cards {
+		display: flex;
+		flex-direction: row;
+		column-gap: 24px;
+	}
+	&-card {
+		width: 33.333%;
+		&__inner {
+			padding: 24px 16px;
+			display: flex;
+			height: 100%;
+			flex-direction: column;
+		}
+		&__title {
+			color: $black-source;
+			font-size: 23px;
+			line-height: 140%;
+			font-weight: 400;
+			letter-spacing: -1.15px;
+			margin: 0px 0px 4px 0px;
+		}
+		&__suptitle {
+			color: $teal-source;
+			font-size: 16px;
+			line-height: 140%;
+			font-weight: 400;
+			margin: 0px 0px 16px 0px;
+		}
+		&__text-holder {
+			display: flex;
+			flex-direction: column;
+			row-gap: 16px;
+			flex: 1 1 auto;
+			p {
+				position: relative;
+				color: $black-source;
+				font-size: 13px;
+				font-weight: 300;
+				line-height: 140%;
+				&::before {
+					content: "";
+					position: absolute;
+					bottom: -8px;
+					left: 0;
+					width: 100%;
+					height: 1px;
+					z-index: 1;
+					background-color: $black-100;
+				}
+				&:last-child {
+					&:before {
+						display: none;
+					}
+				}
+			}
+		}
+		&__footer {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			row-gap: 16px;
+			margin: 16px 0px 0px 0px;
+		}
+		&__price {
+			color: $teal-source;
+			font-size: 32px;
+			line-height: 110%;
+			letter-spacing: -1.6px;
+			font-weight: 400;
+		}
+		.btn-full {
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+}
+
+@media (max-width: $md1) {
+	/*! -- Modal styles----------------------------- */
+	.btn-back {
+		display: flex;
+	}
+	.modal-buy-common {
+		position: fixed;
+		top: 0;
+		right: 0;
+		padding: 80px 16px 32px;
+		max-width: 288px;
+		overflow-y: auto;
+		height: 100%;
+		&.show-look {
+			background-color: $black-source;
+		}
+		&.show-buy {
+			background-color: $white-50;
+		}
+	}
+
+	.modal-look {
+		&__header {
+			display: flex;
+			flex-direction: column;
+			row-gap: 16px;
+			& > h3 {
+				color: $white-50;
+				font-size: 23px;
+				line-height: 140%;
+				letter-spacing: -1.15px;
+				font-weight: 400;
+			}
+			& > p {
+				color: $teal-source;
+				font-weight: 400;
+				font-size: 32px;
+				line-height: 35px;
+				span {
+					font-size: 23px;
+					font-style: italic;
+					line-height: 32px;
+					font-weight: 300;
+				}
+			}
+			margin: 0px 0px 34px 0px;
+		}
+		.explanation {
+			&__title {
+				color: #f3f3f3;
+				font-size: 18px;
+				line-height: 140%;
+			}
+			&__text {
+				font-size: 13px;
+				font-weight: 300;
+				line-height: 140%;
+			}
+		}
+		.get {
+			margin: 0px 0px 24px 0px;
+			&__title {
+				font-size: 23px;
+				line-height: 140%;
+				letter-spacing: -1.15px;
+				margin: 0px 0px 24px 0px;
+				font-weight: 400;
+			}
+			&__inner {
+				row-gap: 8px;
+			}
+			&-item {
+				&__inner {
+					padding: 8px;
+					p {
+						font-size: 13px;
+						font-weight: 300;
+						line-height: 140%;
+					}
+				}
+			}
+		}
+		.btn-outline {
+			width: 100%;
+			max-width: 100%;
+			padding: 11px 16px;
+		}
+		&__footer {
+			display: flex;
+			flex-direction: column;
+			row-gap: 8px;
+			p {
+				color: $white-200;
+				font-size: 13px;
+				font-weight: 300;
+				line-height: 140%;
+			}
+		}
+		.btn-full {
+			width: 100%;
+			max-width: 100%;
+			margin: 0px 0px 8px 0px;
+		}
+	}
+
+	.modal-buy {
+		&__cards {
+			flex-direction: column;
+			column-gap: 0px;
+			row-gap: 32px;
+		}
+		&-card {
+			width: 100%;
+			position: relative;
+			&::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				bottom: -16px;
+				width: 100%;
+				height: 1px;
+				background-color: $teal-source;
+				z-index: 1;
+			}
+			&:last-child {
+				&::after {
+					display: none;
+				}
+			}
+			&__inner {
+				padding: 0px 16px 24px;
+			}
+		}
+	}
+}

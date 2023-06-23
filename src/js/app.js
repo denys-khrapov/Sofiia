@@ -10,6 +10,7 @@ jQuery(document).ready(function ($) {
 	if ($('.logos-slider').length > 0) {
 		initSlick();
 	}
+	changeModal();
 });
 
 function initMobileMenu() {
@@ -202,40 +203,173 @@ function initScrollTo() {
 }
 
 
-if ($('[data-fancybox=""]').length > 0) {
-Fancybox.bind('[data-fancybox]', {
-});  
+let mybutton = document.getElementById("btn-up");
+if (mybutton) {
+  window.onscroll = function() {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > document.body.scrollHeight * 0.5 || document.documentElement.scrollTop > document.documentElement.scrollHeight * 0.5) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    if (document.documentElement.scrollTop || document.body.scrollTop) {
+      scrollToTop();
+    }
+  }
+
+  function scrollToTop() {
+    const currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    if (currentScroll > 0) {
+      window.requestAnimationFrame(scrollToTop);
+      window.scrollTo(0, currentScroll - currentScroll / 24);
+    }
+  }
 }
 
 
+function openTab(evt, tabName) {
+	var i, tabcontent, tablinks;
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for (i = 0; i < tabcontent.length; i++) {
+		 tabcontent[i].style.display = "none";
+	}
+	tablinks = document.getElementsByClassName("tablinks");
+	for (i = 0; i < tablinks.length; i++) {
+		 tablinks[i].className = tablinks[i].className.replace(" active", "");
+	}
+	var elements = document.getElementsByClassName(tabName);
+	for (i = 0; i < elements.length; i++) {
+		 elements[i].style.display = "block";
+	}
+	evt.currentTarget.className += " active";
+	
+	var section = document.getElementById("section-services");
+	section.className = "section-services services " + tabName;
+}
 
 
+if($('#defaultOpen').length>0){
+	document.getElementById("defaultOpen").click();
+}
 
-let mybutton = document.getElementById("btn-up");
-window.onscroll = function() {
-		scrollFunction();
-	 };
-	 
-function scrollFunction() {
-		if (document.body.scrollTop > document.body.scrollHeight * 0.5 || document.documentElement.scrollTop > document.documentElement.scrollHeight * 0.5) {
-		  mybutton.style.display = "block";
-		} else {
-		  mybutton.style.display = "none";
+
+function removeClassesOnEsc() {
+	var modalCommon = jQuery('.modal-buy-common');
+	jQuery(document).keydown(function (event) {
+		if (event.keyCode == 27) {
+			setTimeout(function () {
+				modalCommon.removeClass('show-buy');
+				modalCommon.removeClass('show-look');
+			}, 300);
 		}
-	 }
-	 
-function topFunction() {
-		if (document.documentElement.scrollTop || document.body.scrollTop) {
-		  scrollToTop();
-		}
-	 }
-	 
-function scrollToTop() {
-		const currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
-		if (currentScroll > 0) {
-		  window.requestAnimationFrame(scrollToTop);
-		  window.scrollTo(0, currentScroll - currentScroll / 24);
-		}
-	 }
+	});
+}
 
+function removeClassesOnCloseBtn() {
+	var modalCommon = jQuery('.modal-buy-common');
+	jQuery('.modal-buy-common .fancybox-button').on('click', function () {
+		setTimeout(function () {
+			modalCommon.removeClass('show-buy');
+			modalCommon.removeClass('show-look');
+		}, 500);
+	});
+	jQuery('.fancybox-slide').on('click', function (e) {
+		if (jQuery(this).is(e.target)) {
+			setTimeout(function () {
+				modalCommon.removeClass('show-buy');
+				modalCommon.removeClass('show-look');
+			}, 650);
+		}
+	});
+}
 
+function changeModal() {
+	var modalCommon = jQuery('.modal-buy-common');
+	var btnBuy = jQuery('.btn-buy');
+	var btnLook = jQuery('.btn-look');
+	var closeBtn = jQuery('.modal-buy-common .fancybox-button');
+	var modalBntBuy = jQuery('.modal-look__footer .btn-buy');
+	var modalBntBack = jQuery('.modal-buy .btn-back');
+	var consultationLink = jQuery('.contact-box__text-holder a');
+	jQuery(window).on('click', function () {
+		removeClassesOnEsc();
+	})
+	btnBuy.on('click', function (e) {
+		e.preventDefault();
+		// var currentBtnSrc = jQuery(this).attr('data-src');
+		var currentBtnSrc = jQuery(this).attr('href');
+		var currentModalCommon = jQuery(currentBtnSrc);
+		currentModalCommon.fancybox({
+			autoFocus: false,
+			touch: false,
+			afterLoad: function () {
+
+			},
+			afterClose: function () {
+			}
+		});
+		if (!$.fancybox.isOpen) {
+			currentModalCommon.click();
+		}
+		currentModalCommon.addClass('show-buy');
+		removeClassesOnCloseBtn();
+		removeClassesOnEsc();
+	});
+	btnLook.on('click', function (e) {
+		e.preventDefault();
+		// var currentBtnSrc = jQuery(this).attr('data-src');
+		var currentBtnSrc = jQuery(this).attr('href');
+		var currentModalCommon = jQuery(currentBtnSrc);
+		currentModalCommon.fancybox({
+			autoFocus: false,
+			touch: false,
+			afterLoad: function () {
+	
+			},
+			afterClose: function () {
+			}
+		});
+		if (!$.fancybox.isOpen) {
+			currentModalCommon.click();
+		}
+		currentModalCommon.addClass('show-look');
+		removeClassesOnCloseBtn();
+		removeClassesOnEsc();
+	});
+	modalBntBuy.on('click', function (e) {
+		e.preventDefault();
+		var currentModalBtnBuy = jQuery(this);
+		var currentModalCommon = currentModalBtnBuy.closest('.modal-buy-common');
+		currentModalCommon.addClass('show-buy');
+		currentModalCommon.removeClass('show-look');
+		removeClassesOnCloseBtn();
+		removeClassesOnEsc();
+	});
+	modalBntBack.on('click', function (e) {
+		e.preventDefault();
+		var currentModalBtnBuy = jQuery(this);
+		var currentModalCommon = currentModalBtnBuy.closest('.modal-buy-common');
+		currentModalCommon.addClass('show-look');
+		currentModalCommon.removeClass('show-buy');
+		removeClassesOnCloseBtn();
+		removeClassesOnEsc();
+	});
+// 	jQuery('.btn-full, .btn-outline-link').on('click', function (e) {
+// 		e.preventDefault();
+// 		var href = jQuery(this).attr('href');
+// 		window.location.href = href;
+//   });
+  jQuery('.btn-full-link, .btn-outline-link').on('click', function (e) {
+	e.preventDefault();
+	var href = jQuery(this).attr('href');
+	window.open(href, '_blank');
+});
+
+  
+}

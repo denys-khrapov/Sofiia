@@ -143,7 +143,7 @@
 		&__svg-holder {
 			flex-direction: row;
 			align-items: center;
-			justify-content: start;
+			justify-content: flex-start;
 			column-gap: 8px;
 			margin: 0px 0px 16px 0px;
 			svg {
@@ -161,7 +161,7 @@
 				line-height: 18px;
 			}
 			&__link {
-				justify-content: end;
+				justify-content: flex-end;
 			}
 			&__inner {
 				padding: 0px;

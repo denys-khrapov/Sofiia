@@ -74,6 +74,7 @@
 		color: $white-50;
 		padding: 4px 8px;
 		border-radius: 4px;
+		transition: all 0.3s ease 0s;
 		&.active {
 			color: $black-900;
 			pointer-events: none;
@@ -82,6 +83,13 @@
 		&:focus {
 			box-shadow: inset 0 0 0 3px #008085;
 			outline: none;
+		}
+		&:hover {
+			color: $teal-source;
+		}
+		&:active {
+			color: $teal-800;
+			box-shadow: unset;
 		}
 	}
 }
@@ -258,6 +266,7 @@
 			&__address {
 				display: flex;
 				flex-direction: column;
+				align-items: center;
 				row-gap: 8px;
 				p {
 					font-size: 13px;

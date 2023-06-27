@@ -1,5 +1,6 @@
 /*! -- Links styles----------------------------- */
 .link {
+	width: fit-content;
 	font-size: 16px;
 	line-height: 22px;
 	font-weight: 400;
@@ -13,14 +14,6 @@
 	svg {
 		path {
 			transition: all 0.3s ease 0s;
-		}
-	}
-	&:active {
-		color: $teal-800;
-		svg {
-			path {
-				fill: $teal-800;
-			}
 		}
 	}
 	&:focus {
@@ -47,6 +40,15 @@
 			svg {
 				path {
 					fill: $teal-600;
+				}
+			}
+		}
+		&:active {
+			color: $teal-800;
+			box-shadow: unset;
+			svg {
+				path {
+					fill: $teal-800;
 				}
 			}
 		}

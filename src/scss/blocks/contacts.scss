@@ -5,7 +5,7 @@
 		&::after {
 			content: "";
 			position: absolute;
-			top: -187px;
+			top: -280px;
 			left: 0;
 			background-image: url("../img/contacts-art-left.png");
 			background-position: center center;
@@ -15,6 +15,11 @@
 			height: 1004px;
 			z-index: 1;
 			pointer-events: none;
+		}
+		&__container {
+			&::after {
+				display: none;
+			}
 		}
 		&__left-column {
 			&::after {
@@ -26,22 +31,18 @@
 
 /*! -- Contacts styles----------------------------- */
 .contacts {
-	padding: 256px 0px 128px;
+	padding: 128px 0px 128px;
 	background-color: $black-source;
 	&__container {
 		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-	}
-	&__left-column {
-		width: 100%;
-		max-width: 558px;
+		flex-direction: column;
+		row-gap: 24px;
 		position: relative;
 		&::after {
 			content: "";
 			position: absolute;
-			top: -145%;
-			right: -170px;
+			top: -152%;
+			left: -393px;
 			background-image: url("../img/contacts-art-left.png");
 			background-position: center center;
 			background-size: cover;
@@ -52,9 +53,11 @@
 			pointer-events: none;
 		}
 	}
+	&__left-column {
+		width: 100%;
+	}
 	&__right-column {
 		width: 100%;
-		max-width: 356px;
 		p {
 			font-size: 16px;
 			font-weight: 300;
@@ -65,12 +68,12 @@
 	}
 	&__left-inner {
 		width: 100%;
-		max-width: 330px;
 		position: relative;
 		z-index: 2;
 	}
 	&__svg-holder {
 		display: flex;
+		justify-content: center;
 		margin: 0px 0px 48px 0px;
 	}
 	&__title {
@@ -79,6 +82,7 @@
 		line-height: 68px;
 		letter-spacing: -0.075em;
 		color: $white-50;
+		text-align: center;
 	}
 	&__phone {
 		display: flex;
@@ -112,24 +116,31 @@
 		color: $white-200;
 		font-weight: 300;
 		margin: 0px 0px 16px 0px;
+		text-align: center;
 	}
 	&__links {
 		display: flex;
 		flex-direction: row;
 		column-gap: 24px;
+		justify-content: center;
+	}
+	&__link {
+		display: flex;
 	}
 }
 
 @media (max-width: $md1) {
 	/*! -- Contacts styles----------------------------- */
 	.contacts {
-		padding: 64px 0px;
 		position: relative;
 		overflow: hidden;
 		.container {
 			padding: 0 16px;
 			position: relative;
 			z-index: 2;
+			&::after {
+				display: none;
+			}
 		}
 		&::after {
 			content: "";
@@ -198,7 +209,6 @@
 		&__title {
 			font-size: 50px;
 			line-height: 45px;
-			margin: 0px 0px 24px 0px;
 		}
 	}
 

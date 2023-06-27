@@ -116,6 +116,14 @@
 			line-height: 110%;
 			letter-spacing: -1.6px;
 			font-weight: 400;
+			display: flex;
+			align-items: center;
+			column-gap: 16px;
+			.old-price {
+				font-size: 20px;
+				font-weight: 400;
+				line-height: 140%;
+			}
 		}
 		.btn-full {
 			width: 100%;
@@ -143,6 +151,10 @@
 		&.show-buy {
 			background-color: $white-50;
 		}
+		.btn-outline {
+			font-size: 13px;
+			line-height: 140%;
+		}
 	}
 
 	.modal-look {
@@ -158,15 +170,21 @@
 				font-weight: 400;
 			}
 			& > p {
+				display: flex;
+				align-items: center;
 				color: $teal-source;
 				font-weight: 400;
 				font-size: 32px;
 				line-height: 35px;
+				column-gap: 4px;
 				span {
 					font-size: 23px;
 					font-style: italic;
 					line-height: 32px;
 					font-weight: 300;
+					&:first-of-type {
+						padding-right: 4px;
+					}
 				}
 			}
 			margin: 0px 0px 34px 0px;

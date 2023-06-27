@@ -81,9 +81,10 @@
 		letter-spacing: -0.075em;
 		color: $white-source;
 		span {
-			display: block;
+			display: inline-block;
 			color: $teal-source;
 			font-weight: 300;
+			padding-right: 15px;
 		}
 	}
 	&__left-column {
@@ -231,10 +232,25 @@
 @media (max-width: 829px) {
 	/*! -- CTA styles----------------------------- */
 	.cta {
+		position: relative;
 		&__columns {
 			&::before {
 				display: none;
 			}
+		}
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			left: -232px;
+			bottom: -1px;
+			background-image: url("../img/cta-art-left-1199.png");
+			background-position: center center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: 493px;
+			height: 728px;
+			z-index: 4;
 		}
 	}
 }
@@ -243,6 +259,9 @@
 	/*! -- CTA styles----------------------------- */
 	.cta {
 		padding: 64px 0px 126px;
+		&::before {
+			display: none;
+		}
 		&__container {
 			max-width: 100%;
 			padding: 0px 32px;

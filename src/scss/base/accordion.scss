@@ -113,6 +113,13 @@
 		}
 		picture {
 			width: 100%;
+			img {
+				filter: grayscale(100%);
+				transition: all 0.3s ease 0s;
+				&:hover {
+					filter: grayscale(0%);
+				}
+			}
 		}
 	}
 }

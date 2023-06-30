@@ -111,6 +111,14 @@
 			}
 		}
 	}
+	&.active {
+		color: $teal-source;
+		svg {
+			path {
+				fill: $teal-source;
+			}
+		}
+	}
 }
 
 .tabcontent {

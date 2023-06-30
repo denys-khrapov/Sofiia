@@ -2099,6 +2099,14 @@ input.novalid {
   fill: #24999e;
 }
 
+.tablinks.active {
+  color: #24999e;
+}
+
+.tablinks.active svg path {
+  fill: #24999e;
+}
+
 .tabcontent {
   display: none;
   -webkit-animation: fadeEffect 1s;
@@ -2808,6 +2816,36 @@ input.novalid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.social__link svg path,
+.social__link svg rect {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.social__link:hover svg path {
+  fill: rgb(0, 85, 90);
+}
+
+.social__link:hover svg rect {
+  fill: rgb(0, 85, 90);
+}
+
+.social__link:hover svg rect ~ path {
+  fill: black;
+}
+
+.social__link:active svg path {
+  fill: #24999e;
+}
+
+.social__link:active svg rect {
+  fill: #24999e;
+}
+
+.social__link:active svg rect ~ path {
+  fill: black;
 }
 
 /*! -- Footer styles----------------------------- */

@@ -126,6 +126,38 @@
 	}
 	&__link {
 		display: flex;
+		svg {
+			path,
+			rect {
+				transition: all 0.3s ease 0s;
+			}
+		}
+		&:hover {
+			svg {
+				path {
+					fill: $teal-800;
+				}
+				rect {
+					fill: $teal-800;
+				}
+				rect ~ path {
+					fill: black;
+				}
+			}
+		}
+		&:active {
+			svg {
+				path {
+					fill: $teal-source;
+				}
+				rect {
+					fill: $teal-source;
+				}
+				rect ~ path {
+					fill: black;
+				}
+			}
+		}
 	}
 }
 
